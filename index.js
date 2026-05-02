@@ -306,6 +306,9 @@ function pagar()
         closepagoContainer();
         localStorage.setItem('carshop', []); 
         document.getElementById("car-size").innerHTML = "0";
+        // FORZAR A CERRAR CARRITO
+        document.getElementById("shopcar-container").style.visibility = "hidden";
+        document.getElementById("pago-container").style.visibility = "hidden";
     }
     else
         alert("Saldo insuficiente");
