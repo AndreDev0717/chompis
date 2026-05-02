@@ -1,0 +1,74 @@
+.platillos-container {
+    padding: 30px 0 30px 0;
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    min-height: 60vh;
+    height: auto;
+}
+
+.corpse-container h1 {
+    text-transform: uppercase;
+    font-weight:800;
+    margin: 30px 0 5px 0;
+}
+
+.par-section
+{
+    background-color: #d8554b;
+}
+
+.platillo {
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    margin: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px;
+    height: 265px;
+    width: 225px;
+    padding: 10px;
+    
+    img {
+        height: 80%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    cursor: pointer;
+    scale: 1;
+    transition-duration: 0.1s;
+    transition-property: scale;
+}
+
+.platillo:hover {
+    scale: 1.05;
+    transition-duration: 0.1s;
+    transition-property: scale;
+}
+
+.platillo-information
+{
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .platillo-price {
+        margin-left: 12px;
+
+        color: #d8554b;
+    }
+    .platillo-name
+    {
+    }
+}

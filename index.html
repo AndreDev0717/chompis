@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TE Chonchis</title>
+        <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="header-margin" id="header-margin"></div>
+        <header> 
+            <div class="information-conatiner">
+                <img src="Images/logo.png" alt="">
+                <p class="tittle">Tacos el Chompis</p>
+            </div>
+            <div class="pages-buttons">
+                <buton class="page-button" id="carrito" onclick="shopCar()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Mi carrito</p>
+                    <div class="car-contenido">
+                        <p id="car-size">5</p>
+                    </div>
+                </buton>
+                <buton class="page-button" onclick="goToPage('Menu.html')">
+                    <i class="fa-solid fa-fish"></i>
+                    <p>Menu</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('AboutUs.html')">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Sobre Nosotros</p>
+                </buton>
+            </div>
+       </header> 
+       <img src="Images/banner.jpeg" alt="" class="banner">
+       <div class="corpse-container">
+            <div class="remember-container">
+                <img src="Images/remember.png" alt="">
+                <div class="information-container">
+                    <p class="tittle">NUESTRO LEGADO</p>
+                    <p>
+                        <b>Tacos El Chompis – Mariscos y Más</b> nació como un sueño familiar impulsado por la pasión por la cocina del mar y el deseo de compartir sabores auténticos con la comunidad.
+                        Todo comenzó con una pequeña idea: ofrecer tacos de mariscos preparados al momento, utilizando ingredientes frescos y recetas tradicionales que resaltaran el verdadero sabor del mar. Con esfuerzo, dedicación y el apoyo de clientes locales, el negocio fue creciendo poco a poco.
+                        Lo que inició como un proyecto pequeño se ha convertido en un lugar reconocido por su calidad, sabor y atención al cliente, manteniendo siempre la esencia de un negocio cercano y comprometido con sus clientes.
+                        <br>
+                        <br>
+                        El origen de Tacos El Chompis está inspirado en la tradición culinaria de las zonas costeras de México, donde los mariscos frescos forman parte fundamental de la gastronomía.
+                        Antes de consolidarse como restaurante, el proyecto comenzó como una venta informal de tacos, donde se perfeccionaron recetas y se creó una base de clientes fieles. Gracias a la aceptación del público, se decidió formalizar el negocio y expandir el menú, incorporando nuevos platillos como aguachiles, ceviches y cocteles.
+                        Este crecimiento ha permitido posicionar a Tacos El Chompis como una opción confiable para quienes buscan calidad, sabor y una experiencia auténtica.
+                    </p>
+                </div>
+            </div>
+
+       </div>
+       <footer>
+            <div class="information-conatiner">
+                <img src="Images/nlogo.png" alt="">
+                <p class="tittle">(C) Tacos el Chompis 2026</p>
+            </div>
+            <div class="pages-buttons">
+                <buton class="page-button" onclick="goToPage('https://www.facebook.com/share/18kvRp1SAM/')">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>Facebook</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('https://maps.app.goo.gl/daBxRQDAbFfS7ycYA')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Avenue Huapango 9737, Villas de BC</p>
+                </buton>
+                <buton class="page-button">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>664 320 8909</p>
+                </buton>
+            </div>
+       </footer>
+       
+       <div class="shopcar-container" id="shopcar-container">
+        <div class="closeShopInput" onclick="closeShopCar();"></div>
+            <div class="car-container" id="car-container">
+                <i class="fa-solid fa-xmark" id="closeShopCar" onclick="closeShopCar();"></i>
+                <h1>Mi carrito</h1>
+                <div class="products-container" id="products-container">
+                </div>
+                <div class="compra-container">
+                    <p class="productos-size" id="total-productos">x1 productos</p>
+                    <button id="total-carrito" onclick="PagarCarrito();">$150</button>
+                </div>
+                <div class="pago-container" id="pago-container">
+                    <div class="blurpago-container" onclick="closepagoContainer();"></div>
+                    <div class="pago">
+                        <h1><i class="fa-brands fa-cash-app"></i>Operacion de pago</h1>
+                        <input type="number" min="0.0" step="0.01" name="" placeholder="1,240.00" id="cash-amount" oninput="detectCompraAvaible(this.value);">
+                        <!-- <select name="" id="metodopagoInput" onchange="metodoPago(this.value);">
+                            <option value="efectivo">Efectivo</option>
+                            <option value="tarjeta">Tarjeta</option>
+                        </select> -->
+
+                        <div class="tarjeta-pagar" id="tarjeta-pagar">
+                            <input type="text"name="" placeholder="2540 5265 ****" id="tarjeta" maxlength="16">
+                            <input type="date" name="" placeholder="Fecha" id="fecha">
+                            <div class="cvv-container">
+                                <input type="password" name="" placeholder="CVV" id="cvv" maxlength="3" inputmode="numeric">
+                                <i class="fa-solid fa-eye view-pasword-button" id="visiblepassword" onclick="viewPassword();"></i>
+                            </div> 
+
+                        </div>
+
+                        <input type="button" value="Pagar" id="pagar-button" onclick="pagar();">
+                        <p id="cambio-cantidad">Cambio : $500</p>
+                        <p id="pago-cantidad">Total a pagar : $1500</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </body>
+</html>
+<script src="index.js"></script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TE Chonchis</title>
+        <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="menu.css">
+    </head>
+    <body>
+       <header> 
+            <div class="information-conatiner">
+                <img src="Images/logo.png" alt="">
+                <p class="tittle">Tacos el Chompis</p>
+            </div>
+            <div class="pages-buttons">
+                <buton class="page-button" id="carrito" onclick="shopCar()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Mi carrito</p>
+                    <div class="car-contenido">
+                        <p id="car-size">5</p>
+                    </div>
+                </buton>
+                <buton class="page-button" onclick="goToPage('index.html')">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Inicio</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('AboutUs.html')">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Sobre Nosotros</p>
+                </buton>
+            </div>
+       </header> 
+       <div class="corpse-container">
+            <div class="platillos-container" id="platillos-container">
+            </div>
+       </div>
+       <footer>
+            <div class="information-conatiner">
+                <img src="Images/logo.png" alt="">
+                <p class="tittle">(C) Tacos el Chompis 2026</p>
+            </div>
+            <div class="pages-buttons">
+                <buton class="page-button" id="carrito" onclick="goToPage('')">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>Facebook</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('Menu.html')">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>Instagram</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('AboutUs.html')">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>664 320 8909</p>
+                </buton>
+            </div>
+       </footer>
+    </body>
+</html>
+<script src="index.js"></script>
+<script src="menu.js"></script>

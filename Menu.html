@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TE Chonchis</title>
+        <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="menu.css">
+    </head>
+    <body>
+        <div class="header-margin" id="header-margin"></div>
+       <header> 
+            <div class="information-conatiner">
+                <img src="Images/logo.png" alt="">
+                <p class="tittle">Tacos el Chompis</p>
+            </div>
+            <div class="pages-buttons">
+                <buton class="page-button" id="carrito" onclick="shopCar();">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Mi carrito</p>
+                    <p id="car-size">5</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('index.html')">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Inicio</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('AboutUs.html')">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Sobre Nosotros</p>
+                </buton>
+            </div>
+       </header> 
+       <div class="corpse-container">
+            <h1 style="color: #d8554b;"><i class="fa-solid fa-utensils"></i> Platillos <i class="fa-solid fa-utensils"></i></h1>
+            <div class="platillos-container par-section" id="platillos-container">
+            </div>
+            <h1 style="color: #d8554b;"><i class="fa-solid fa-glass-water"></i> Bebidas <i class="fa-solid fa-glass-water"></i></h1>
+            <div class="platillos-container" id="bebidas-container">
+            </div>
+       </div>
+       <footer>
+            <div class="information-conatiner">
+                <img src="Images/nlogo.png" alt="">
+                <p class="tittle">(C) Tacos el Chompis 2026</p>
+            </div>
+            <div class="pages-buttons">
+                <buton class="page-button" onclick="goToPage('https://www.facebook.com/share/18kvRp1SAM/')">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>Facebook</p>
+                </buton>
+                <buton class="page-button" onclick="goToPage('https://maps.app.goo.gl/daBxRQDAbFfS7ycYA')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Avenue Huapango 9737, Villas de BC</p>
+                </buton>
+                <buton class="page-button">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>664 320 8909</p>
+                </buton>
+            </div>
+       </footer>
+
+       <div class="shopcar-container" id="shopcar-container">
+            <div class="closeShopInput" onclick="closeShopCar();"></div>
+            <div class="car-container" id="car-container">
+                <i class="fa-solid fa-xmark" id="closeShopCar" onclick="closeShopCar();"></i>
+                <h1>Mi carrito</h1>
+                <div class="products-container" id="products-container">
+                </div>
+                <div class="compra-container">
+                    <p class="productos-size" id="total-productos">x1 productos</p>
+                    <button id="total-carrito" onclick="PagarCarrito();">$150</button>
+                </div>
+                <div class="pago-container" id="pago-container">
+                    <div class="blurpago-container" onclick="closepagoContainer();"></div>
+                    <div class="pago">
+                        <h1><i class="fa-brands fa-cash-app"></i>Operacion de pago</h1>
+                        <input type="number" min="0.0" step="0.01" name="" placeholder="1,240.00" id="cash-amount" oninput="detectCompraAvaible(this.value);">
+                        <!-- <select name="" id="metodopagoInput" onchange="metodoPago(this.value);">
+                            <option value="efectivo">Efectivo</option>
+                            <option value="tarjeta">Tarjeta</option>
+                        </select> -->
+
+                        <div class="tarjeta-pagar" id="tarjeta-pagar">
+                            <input type="text"name="" placeholder="2540 5265 ****" id="tarjeta" maxlength="16">
+                            <input type="date" name="" placeholder="Fecha" id="fecha">
+                            <div class="cvv-container">
+                                <input type="password" name="" placeholder="CVV" id="cvv" maxlength="3" inputmode="numeric">
+                                <i class="fa-solid fa-eye view-pasword-button" id="visiblepassword" onclick="viewPassword();"></i>
+                            </div> 
+
+                        </div>
+
+                        <input type="button" value="Pagar" id="pagar-button" onclick="pagar();">
+                        <p id="cambio-cantidad">Cambio : $500</p>
+                        <p id="pago-cantidad">Total a pagar : $1500</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </body>
+</html>
+<script src="index.js"></script>
+<script src="menu.js"></script>
