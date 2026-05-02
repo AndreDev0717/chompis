@@ -540,6 +540,10 @@ footer .page-button:hover {
     .car-container {
         width: 80%;
     }
+    .pago {
+        width: 65%;
+        height: 80%;
+    }
 }
  @media(max-width: 1000px) {
     header .pages-buttons .page-button p{
