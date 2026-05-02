@@ -188,13 +188,18 @@ function get_size_product(product)
     return psize;
 }
 
-function closeShopCar()
+function closeShopCar(FORZAR = false)
 {
     if(document.getElementById("pago-container").style.visibility != "hidden")
     {
         document.getElementById("pago-container").style.visibility = "hidden";
     }
     else {
+        document.getElementById("shopcar-container").style.visibility = "hidden";
+        document.getElementById("pago-container").style.visibility = "hidden";
+    }
+    if(FORZAR)
+    {
         document.getElementById("shopcar-container").style.visibility = "hidden";
         document.getElementById("pago-container").style.visibility = "hidden";
     }
@@ -302,14 +307,13 @@ function pagar()
     if(money >= total && readytobuy)
     {
         alert("¡Compra realiza con exito!");
-        closeShopCar();
+        closeShopCar(true);
         closepagoContainer();
         localStorage.setItem('carshop', []); 
         document.getElementById("car-size").innerHTML = "0";
+        document.getElementById("cash-amount").value = "0";
         // FORZAR A CERRAR CARRITO
-        document.getElementById("shopcar-container").style.visibility = "hidden";
-        document.getElementById("pago-container").style.visibility = "hidden";
-    }
+        }
     else
         alert("Saldo insuficiente");
 
