@@ -149,6 +149,7 @@ function shopCar()
         const product = `
             <div class="product" onclick="eliminarProducto(${producto.id});">
                 <img src="Images/${producto.img}" alt="">
+                <i class="fa-solid fa-trash delete-icon"></i>
                 <div class="information-container">
                     <div class="header">
                         <p class="tittle">${producto.name}</p>
