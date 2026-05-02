@@ -190,7 +190,14 @@ function get_size_product(product)
 
 function closeShopCar()
 {
-    document.getElementById("shopcar-container").style.visibility = "hidden";
+    if(document.getElementById("pago-container").style.visibility != "hidden")
+    {
+        document.getElementById("pago-container").style.visibility = "hidden";
+    }
+    else {
+        document.getElementById("shopcar-container").style.visibility = "hidden";
+        document.getElementById("pago-container").style.visibility = "hidden";
+    }
 }
 
 function eliminarProducto(id) {
